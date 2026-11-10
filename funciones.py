@@ -13,4 +13,4 @@ def imprimirTablero(tablero):
         for celda in fila:
             print(celda, end= " | ")#reemplazo el salto de linea por|
             #print(celda)#salto de linea al final
-    print()#Salto linea al final de fila
+        print()#Salto linea al final de fila
