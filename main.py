@@ -7,5 +7,5 @@ from funciones import *
 print("###############################")
 print("--------HUNDIR LA FLOTA--------")
 print("###############################")
-tablero=crearTableroVacio(9,9,"-")
+tablero = crearTableroVacio(9,9,"-")
 imprimirTablero(tablero)
