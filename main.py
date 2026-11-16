@@ -2,52 +2,24 @@
 #Autores: Marcos Cobarro Torres, Umang Sanjaykumar Parmar y Álvaro Barceló López
 #Grupo: 1ºDAW
 from funciones import *
+from umang import *
 
+print("********************************************")
+print("--------BIENVENIDO A HUNDIR LA FLOTA--------")
+print("********************************************")
 
-print("###############################")
-print("--------HUNDIR LA FLOTA--------")
-print("###############################")
-while True:
-    try:
-        comprobarcoordenadas = False
-        opcion = int(input("Por favor, selecciona el nivel de dificultad: "))
-        if opcion == 1:
-            print("########## TU TABLERO ##########")
-            tablero = crearTableroVacio(10,10,"-")
-            imprimirTablero(tablero)
-            pedirCoordenadas1 = (input("Introduce la fila (A - J): "))
-            pedirCoordenadas2 = int(input("Introduce la columna (0 - 9): "))
-            if pedirCoordenadas1 and pedirCoordenadas2 != coordenadasOrdenador:
-                comprobarcoordenadas = False
-                print("¡AGUA! Has fallado", comprobarcoordenadas)
+def menuDificultad(): #Para que pide una opcion válida al usuario y que no pare hasta que el usuario introduzca un numero valido
+    while True:
+        try:
+            opcion = int(input("Por favor, selecciona el nivel de dificultad (1, 2 ó 3): "))
+            if opcion in [1,2,3]:
+                return opcion
             else:
-                comprobarcoordenadas = True
-                print("¡¡¡TOCADO!!!", comprobarcoordenadas)
-        elif opcion == 2:
-            print("########## TU TABLERO ##########")
-            tablero = crearTableroVacio(10,10,"-")
-            imprimirTablero(tablero)
-            pedirCoordenadas1 = (input("Introduce la fila (A - J): "))
-            pedirCoordenadas2 = int(input("Introduce la columna (0 - 9): "))
-            if pedirCoordenadas1 and pedirCoordenadas2 != coordenadasOrdenador:
-                comprobarcoordenadas = False
-                print("¡AGUA! Has fallado", comprobarcoordenadas)
-            else:
-                comprobarcoordenadas = True
-                print("¡¡¡TOCADO!!!", comprobarcoordenadas)
-        else:
-            print("########## TU TABLERO ##########")
-            tablero = crearTableroVacio(10,10,"-")
-            imprimirTablero(tablero)
-            pedirCoordenadas1 = (input("Introduce la fila (A - J): "))
-            pedirCoordenadas2 = int(input("Introduce la columna (0 - 9): "))
-            if pedirCoordenadas1 and pedirCoordenadas2 != coordenadasOrdenador:
-                comprobarcoordenadas = False
-                print("¡AGUA! Has fallado", comprobarcoordenadas)
-            else:
-                comprobarcoordenadas = True
-                print("¡¡¡TOCADO!!!", comprobarcoordenadas)
+                print("Por favor, introduce un número válido: 1, 2 ó 3")
 
-    except Exception as errorNumero:
-        print("Por favor introduce un número válido: 1, 2 ó 3")
+        except Exception as errorNumero:
+            print("Ups... Debes de introducir un número entero: 1, 2 ó 3")
+
+dificultad_elegida = menuDificultad()
+print(dificultad_elegida)
 
