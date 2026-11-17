@@ -24,6 +24,6 @@ print("########## TABLERO DE DISPAROS##########")
 Imprime_Tablero(tablero_Disparo)
 
 #Bucle principal que se repite hasta que ambos tengan barcos 
-while QuedanBarcos(tablero_Jugador) and QuedanBarcos(tablero_Ordenador):
+#while QuedanBarcos(tablero_Jugador) and QuedanBarcos(tablero_Ordenador):
 
     #Tablero Jugador 
