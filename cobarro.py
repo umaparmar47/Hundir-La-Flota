@@ -184,4 +184,3 @@ def PideCoordenadas(tablero):
             validez_coordenada = True
 
     return fila, columna
-
