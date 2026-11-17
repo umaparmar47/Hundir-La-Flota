@@ -163,3 +163,25 @@ def CrearTableroOrdenador(nivel):
                             tablero[fila][columna + j] = listaBarcos[i]
                         colocado = True
     return tablero
+
+def PideCoordenadas(tablero):
+    
+    validez_coordenada = False
+    while not validez_coordenada:
+        fila_validez = False
+        columna_validez = False
+        while not fila_validez:
+            fila = input("Introduce una fila: ").upper()
+            if fila in "ABCDEFGHIJ":
+                fila_validez = True
+        while not columna_validez:
+            columna = input("Introduce una columna: ")
+            if columna.isdigit() == True:
+                columna = int(columna)
+                if 0 <= columna <= 9:
+                    columna_validez = True
+        if CompruebaCoordenadas(tablero, fila, columna) == True:
+            validez_coordenada = True
+
+    return fila, columna
+
