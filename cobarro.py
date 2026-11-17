@@ -1,6 +1,6 @@
 import random
 from funciones import *
-def CrearTableroJugador(nivel):
+def CrearTableroJugador(opcion):
     tablero = crearTableroVacio(10,10, "-")
     lancha = "L"
     buque = "B"
@@ -82,7 +82,7 @@ def CrearTableroJugador(nivel):
                         colocado = True
     return tablero
 
-def CrearTableroOrdenador(nivel):
+def CrearTableroOrdenador(opcion):
     tablero = crearTableroVacio(10,10, "-")
     lancha = "L"
     buque = "B"
