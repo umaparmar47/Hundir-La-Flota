@@ -6,22 +6,25 @@ print("--------BIENVENIDO A HUNDIR LA FLOTA--------")
 print("********************************************")
 from funciones import *
 from umang import *
+from cobarro import *
 
 
 #Pedir dificultad
-dificultad = menuDificultad()
+
+dificultad_elegida = menuDificultad()
+print("Has elegido la dificultad: ",dificultad_elegida)
 
 #Tableros
-tablero_Jugador = CrearTableroJugador()
-tablero_Ordenador = CrearTableroOrdenador()
-tablero_Disparo = crearTableroVacio()
+tablero_Jugador = CrearTableroJugador(dificultad_elegida)
+tablero_Ordenador = CrearTableroOrdenador(dificultad_elegida)
+tablero_Disparo = crearTableroVacio(10, 10, "-")
 
 #Imprimimos los tableros
 print("########## TU TABLERO ##########")
-Imprime_Tablero(tablero_Jugador)
+imprimirTablero(tablero_Jugador)
 
 print("########## TABLERO DE DISPAROS##########")
-Imprime_Tablero(tablero_Disparo)
+imprimirTablero(tablero_Disparo)
 
 #Bucle principal que se repite hasta que ambos tengan barcos 
 #while QuedanBarcos(tablero_Jugador) and QuedanBarcos(tablero_Ordenador):

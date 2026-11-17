@@ -10,8 +10,6 @@ def menuDificultad(): #Para que pide una opcion válida al usuario y que no pare
         except Exception as errorNumero:
             print("Ups... Debes de introducir un número entero: 1, 2 ó 3")
 
-dificultad_elegida = menuDificultad()
-print("Has elegido la dificultad: ",dificultad_elegida)
 
 
 def CompruebaCoordenadas(tablero, fila, columna): #Comprueba el tablero, la fila (Letra), la columna (número).
@@ -25,8 +23,8 @@ def CompruebaCoordenadas(tablero, fila, columna): #Comprueba el tablero, la fila
     if fila_letra.upper() not in letras_fila:
         return False # --> si el usuario introduce un numero fuera de A-J no le devolvemos nada
     
-    #creamos estas siguientes varibales para que no tengamos que escribir "letras_fila[fila_letra-upper()]" todo el rato
-    f = letras_fila[fila_letra-upper()]
+    #creamos estas siguientes varibales para que no tengamos que escribir "letras_fila[fila.upper()]" todo el rato
+    f = letras_fila[fila.upper()]
     c = columna_num
 
     #Primero de todo comprobamos si el tablero esta dentro de Array [10x10]
@@ -36,7 +34,7 @@ def CompruebaCoordenadas(tablero, fila, columna): #Comprueba el tablero, la fila
 
     #Comprobamos lo que hay en esa celda especifica, para no volver a disparar en el mismo lugar 2 veces
     # Por ejemplo si hay una "X" (ya tocado) o "A" (Agua), significa que ya se había disparado ahi antes
-    if tablero[F][C] == "X" or tablero[F][C] == "A":
+    if tablero[f][c] == "X" or tablero[f][c] == "A":
          return False
 
         

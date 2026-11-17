@@ -1,6 +1,7 @@
 import random
 from funciones import *
-def CrearTableroJugador(opcion):
+from umang import *
+def CrearTableroJugador(nivel):
     tablero = crearTableroVacio(10,10, "-")
     lancha = "L"
     buque = "B"
@@ -82,7 +83,7 @@ def CrearTableroJugador(opcion):
                         colocado = True
     return tablero
 
-def CrearTableroOrdenador(opcion):
+def CrearTableroOrdenador(nivel):
     tablero = crearTableroVacio(10,10, "-")
     lancha = "L"
     buque = "B"
