@@ -49,8 +49,7 @@ while QuedanBarcos(tablero_Jugador) and QuedanBarcos(tablero_Ordenador):
     fila_ordenador = random.randint(0,9) #randit devuele un número entero entre 0,9
     columna_ordenador = random.randint(0,9)
     letras_fila = {0: "A", 1: "B", 2: "C", 3: "D", 4: "E", 5: "F", 6: "G", 7: "H", 8: "I", 9: "J"}
-
-    print(f"El ordenador ha disparado en la posicion: {fila_ordenador}, {columna_ordenador}")
+    print(f"El ordenador ha disparado en la posicion: {letras_fila[fila_ordenador]}, {columna_ordenador}")
 
     #Comprobamos el disparo del ordenador sobre el tablero del jugador
     RealizarDisparo(tablero_Jugador,tablero_Jugador,fila_ordenador,columna_ordenador)
